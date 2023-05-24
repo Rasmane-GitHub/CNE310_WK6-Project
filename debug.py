@@ -1,13 +1,14 @@
 def lone_sum(a, b, c):
     if a >= b:
-        return 0
+        return c
     elif a == c:
         return b
     elif b == c:
         return a
+    elif a == b and a == c and b == c:
+        return 0
     else:
         return a+b+c
-
 
 print("lone_sum of 10, 10, 10 should be 0: " + str(lone_sum(10, 10, 10)))
 print("lone_sum of 1, 2, 3 should be 6: " + str(lone_sum(1, 2, 3)))
